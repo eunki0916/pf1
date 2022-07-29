@@ -1,0 +1,104 @@
+footer {
+  background-color : #1b1b1b;
+  color: white;
+}
+footer a {
+  color: #ccc;
+}
+
+footer .inner {
+  height: 300px;
+  box-sizing: border-box;
+}
+
+
+footer .inner .left {
+  gap: 50px;
+}
+
+footer .inner .left h1 {
+  font-size: 0;
+  background-image: url(../img/f_logo.png);
+  width: 113px;
+  height: 30px;
+  display: block;
+  transform: translateY(-40px);
+}
+
+footer .inner .left h1 a {
+  
+  
+}
+
+footer .inner .left address {
+  
+  color: #ccc;
+  transform: translateY(-50px);
+}
+
+footer .inner .left p.copyright {
+  color: #ccc;
+  font-size: 12px;
+}
+
+footer .inner .right {
+  
+}
+
+footer .inner .right ul.personal {
+  
+  justify-content: space-evenly;
+  transform: translateY(-40px);
+  
+}
+
+footer .inner .right ul.personal li {
+  
+  
+}
+
+footer .inner .right ul.personal li a {
+  
+  font-size: 12px;
+  
+}
+
+footer .inner .bottom {
+  
+}
+
+footer .inner .bottom ul.sns {
+  gap: 50px;
+  align-items: center;
+  transform: translateX(-50px);
+}
+footer .inner .right .bottom ul.sns li {
+  background-image: url(../img/logo-instagram.svg);
+}
+footer .inner .right .bottom ul.sns li a{
+  color: #eee;
+  font-size: 0;
+  width: 20px;
+  height: 20px;
+  display: block;;
+}
+footer .inner .right .bottom ul.sns li:nth-child(2) {
+  background-image: url(../img/logo-youtube.svg);
+}
+footer .inner .right .bottom ul.sns li:nth-child(3) {
+  background-image: url(../img/logo-twitter.svg);
+}
+
+
+footer .inner .right .bottom >a {
+  
+}
+footer .inner .right .bottom >a::before {
+  content: "";
+  background-image: url(../img/flag_store.png);
+  width: 64px;
+  height: 50px;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 13px;
+}

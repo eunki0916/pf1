@@ -1,0 +1,175 @@
+#title {
+    height: 100%;
+    background-image: url(../img/section01_bg.png);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* height: 700px; */
+    min-height: 650px;
+    position: relative;
+}
+
+#title::before {
+    content: "";
+    background-image: url(../img/sec01_logo.png);
+    background-size: cover;
+    width: 1508px;
+    height: 383px;
+    animation-name: fadeIn;
+    animation-duration: 2000ms;
+    
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.7);
+    }
+    70% {
+        transform: scale(1.2);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+#title form.search {
+    width: 700px;
+    background-color: white;
+    height: 60px;
+    box-shadow: 2px 0px 10px #ccc;
+    border-radius: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 30px;
+    padding-left: 38px;
+    box-sizing: border-box;
+    position: relative;
+    animation-name: moveLeft;
+    animation-duration: 1000ms;
+    
+    animation-delay: 2000ms;
+    animation-fill-mode: both;
+}
+@keyframes moveLeft {
+    50% {
+        transform: translateX(50px);
+    }
+    
+    100% {
+        transform: translateX(0px);
+    }
+}
+
+#title form.search::before {
+    content: "";
+    background-image: url(../img/search-outline.svg);
+    margin-left: 20px;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    left: 0;
+
+}
+
+#title form.search input {
+    /* width: 1000px;
+    margin-top: 50px;
+    margin-left: 150px;
+    height: 70px;
+    border-radius: 50px;
+    border: 1px solid #eee; */
+    border: none;
+    line-height: 1.6;
+    
+}
+#title form.search input:focus {
+    /*focus input태그안에 커서를 위치시키는 행위*/
+    
+    outline: none;
+    
+    
+}
+#title form.search input:focus::placeholder {
+    color: transparent;
+}
+
+#title form.search button {
+    /* width: 170px; */
+    width: 100px;
+    /* height: 50px; */
+    line-height: 2.2;
+    font-weight: bold;
+    color: white;
+    background-color: red;
+    /* border-radius: 50px; */
+    border-radius: calc(29.3333px/2);
+    border: none;
+    cursor: pointer;
+
+}
+
+#title h2 {
+
+}
+
+#title ul.hash {
+    display: flex;
+    gap: 15px;
+    column-gap: 40px;
+}
+
+#title ul.hash li {
+    margin-top: 20px;
+    border: 1px solid #eee;
+    width: 130px;
+    height: 30px;
+    border-radius: 15px;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 100;
+    line-height: 30px;
+}
+
+#title ul.hash li a {
+
+}
+#title ul.hash li a:hover {
+    color: yellowgreen;
+}
+#title span {
+    position: absolute;
+    bottom: 20px;
+}
+#title span::before {
+    content: "";
+    width: 20px;
+    height: 20px;
+    display: block;
+    border: 2px solid;
+    border-top : transparent;
+    border-left : transparent;
+    margin: 0 auto;
+    transform: rotate(45deg);
+    margin-bottom: 10px;
+    animation-name: scroll;
+    animation-duration: 1000ms;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+@keyframes scroll {
+    0% {
+        transform: translateY(0px) rotate(45deg) ;        
+    } 
+    100%{
+        transform:  translateY(10px) rotate(45deg);          
+    }
+}
+#title span::after{
+    content: "Scroll";
+}

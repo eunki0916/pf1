@@ -1,0 +1,249 @@
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+}
+header {
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+    
+}
+/* header:hover{
+    background-color: #fff;
+    height: 470px;
+}
+ */
+header::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    border: 1px solid #ccc;
+    left: 0;
+    top: 27px;
+    z-index: 1;
+    
+}
+
+
+header div.inner {
+    /*하위 선택자*/
+    height: 88px;
+    display: flex;
+    justify-content: space-between;
+    /* justify-content: space-around; */
+    /* justify-content: space-evenly; */
+    /* justify-content: center; */
+    /* justify-content: flex-end; */
+    align-items: center;
+    /* align-items: baseline; */
+    position: relative;
+    
+    margin-top: 28px;
+}
+
+header .inner,header .inner > *{ /* *은 */
+/*     border: 1px solid #333; */
+}
+
+header .inner {
+   
+   
+}
+
+header .inner h1 {
+    
+}
+
+header .inner h1 a {
+    background-image: url(../img/logo.png);
+    width: 142px;
+    height: 35px;
+    display: block;
+    font-size: 0;
+}
+
+header .inner ul.gnb {
+    
+    display: flex;
+    align-self: flex-start;
+    gap: 45px;
+    margin-right: 50px;
+    
+    
+}
+
+header .inner ul.gnb::before {
+    content: "";
+    background-color: white;
+    width: 105%;
+    height: 0px;
+    position: absolute;
+    left: -2.5%;
+    top: -28px;
+    z-index: -1;
+    transition: all 1500ms;
+    
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    box-shadow: 2px 1px 10px #ccc;
+    
+}
+header .inner ul.gnb:hover::after {
+    content: "";
+    width: 105%;
+    height: 0px;
+    position: absolute;
+    left: -2.5%;
+    top: 100%;
+    z-index: -1;
+    border: 1px solid #ccc;
+    
+    
+}
+header .inner ul.gnb:hover::before {
+    height: 440px;
+    
+}
+
+
+header .inner ul.gnb li {
+   
+}
+
+header .inner ul.gnb li h2 a {
+    padding: 20px 16px;
+    display: block;
+    font-weight: 400;
+    font-size: 20px;
+    padding-top: 26.5px;
+    line-height: 2;
+    border-bottom: none;
+    
+    
+}
+header .inner ul.gnb li:hover h2 a {
+    color: red;
+    transition-duration: 500ms;
+    
+}
+header .inner ul.gnb li h2 a::after {
+    content: "";
+    display: block;
+    width: 100%;
+    border-bottom: 4px solid red;
+    transform: scaleX(0) translateY(20px);
+    transition : all 2s;
+    transform-origin: 50%;
+}
+
+header .inner ul.gnb li:hover h2 a::after {
+    content: "";
+    display: block;
+    width: 100%;
+    border-bottom: 4px solid red;
+    transform: scaleX(100%) translateY(20px);
+    
+    
+}
+
+header .inner ul.enb {
+    display: flex;
+    gap: 15px;
+}
+
+header .inner ul.enb li {
+
+}
+
+header .inner ul.enb li select{
+    background-color: transparent;
+    border: none;
+}
+
+header .inner ul.enb li a {
+    font-size: 0;
+    width: 20px;
+    height: 13px;
+    display: flex;
+    border-top: 3px solid #666;
+    border-bottom: 3px solid #666;
+    align-items: center;
+}
+header .inner ul.enb li a:hover {
+    border-color: red;    
+}
+header .inner ul.enb li a::before {
+    content: "";
+/*     border-top: 3px solid #666; */
+    width: 100%;
+    display:block;
+    height: 3px;
+    background-color: #666;
+}
+header .inner ul.enb li a:hover::before{
+    background-color: red;
+}
+
+
+header .inner ul.tnb { 
+    position: absolute;
+    right: 0;
+    top: -22px;
+    font-size: 12px;
+    display: flex;
+    gap: 15px;
+}
+
+header .inner ul.tnb li {
+    
+}
+
+header .inner ul.tnb li a{
+    
+}
+header .inner ul.tnb li a::after {
+    content: "";
+    background-image: url(../img/openinnwe.svg);
+    width: 17px;
+    height: 17px;
+    display: inline-block;
+    background-size: contain;
+    vertical-align: -4px;
+}
+
+header .inner ul.gnb li ul.gnbsub {
+    display: none;
+}
+header .inner ul.gnb:hover li ul.gnbsub{
+    display: block;
+    
+    
+}
+
+header .inner ul.gnb:hover ul.gnbsub{
+    opacity: 0;
+    animation-name: gnbfadein;
+    animation-fill-mode: forwards;
+    animation-duration: 1000ms;
+    animation-delay: 1000ms;
+}
+@keyframes gnbfadein {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+header .inner ul.gnb li ul.gnbsub li {
+
+}
+header .inner ul.gnb li ul.gnbsub li a {
+    line-height: 2;
+    padding-left: 16px;
+/*     padding-right: 10px; */
+}
+header .inner ul.gnb li ul.gnbsub li a:hover {
+    color: red;
+}
