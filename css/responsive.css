@@ -107,6 +107,8 @@
   }
   #title ul.hash {
     column-gap: 20px; 
+    flex-wrap: wrap;
+    justify-content: center;
   }
 /*  빙그레맛  */
   #taste div.inner ul.list li {
